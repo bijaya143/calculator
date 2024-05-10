@@ -27,7 +27,9 @@ class ProfileScreen extends StatelessWidget {
               height: desiredHeight,
               width: double.infinity,
               color: Colors.amber,
-              child: const Text('I am first'),
+              child: const Center(child:( Text('I am first', style: TextStyle(
+                fontSize: 50
+              ),))),
             ),
             Positioned(
                 top: 1,
@@ -36,7 +38,9 @@ class ProfileScreen extends StatelessWidget {
                   height: desiredHeightForChild,
                   width: desiredWidthForChild,
                   color: Colors.lightGreen,
-                  child: const Text('I am second'),
+                  child: GestureDetector(onDoubleTap: (){
+                    print("-------------->Clicked");
+                  }, child: const Text('I am second')),
             )),
             Positioned(
                 bottom: -20,
